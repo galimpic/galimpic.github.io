@@ -1,4 +1,5 @@
 var gateway = `ws://${window.location.hostname}/ws`;
+document.getElementById("hn").innerHTML = window.location.hostname;
 var websocket;
 // Init web socket when the page loads
 window.addEventListener('load', onload);
