@@ -197,8 +197,12 @@
         return datetime;
     }
 	
-	function renderCommand(cmd) {
-	  retrievedValue.innerHTML = newValueReceived;
+function renderCommand(cmd) {
+	retrievedValue.innerHTML = cmd;
+	var c = document.getElementById("scr");
+	var ctx = c.getContext("2d");
+	ctx.font = "30px Arial";
+	ctx.fillText(cmd, 10, 50);		
 	};
 
 
