@@ -200,7 +200,7 @@
 function renderCommand(cmd) {
 	retrievedValue.innerHTML = cmd;
 	var c = document.getElementById("scr").getContext("2d");
-	a = split(",", cmd);
+	a = split(";", cmd);
 	if (a[0] == "P") {
 	  c.font = "30px Arial";
 	  c.fillText(cmd, a[1], a[2]);		
