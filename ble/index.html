@@ -10,12 +10,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>simdget 3</title>
+    <title>simdget</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="">
 </head>
 <body>
-  <h1>simdget 3</h1>
+  <h1>simdget 4</h1>
   <button id="connectBleButton">Connect to BLE Device</button>
   <button id="disconnectBleButton">Disconnect BLE Device</button>
   <p>BLE state: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
@@ -201,12 +201,8 @@ function renderCommand(cmd) {
 	
 	var c = document.getElementById("scr").getContext("2d");
 	const a = split(";", cmd);
-	retrievedValue.innerHTML = a[0] + "X";
-	if (a[0] == "P") {
-	  c.font = "30px Arial";
-	  c.fillText(cmd, a[1], a[2]);		
-	}
-	};
+	retrievedValue.innerHTML = a[0];
+};
 
 
 </script>
