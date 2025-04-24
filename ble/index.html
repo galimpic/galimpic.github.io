@@ -18,7 +18,7 @@
 <body onload="load()">
     <canvas id="scr" height="400" style="border:1px solid #000000;">
     </canvas>
-    <h1>simdget 8</h1>
+    <h1>simdget <span id="simdgetId">X</span></h1>
     <button id="connectBleButton">Connect to BLE Device</button>
     <button id="disconnectBleButton">Disconnect BLE Device</button>
     <p>BLE state: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
@@ -31,6 +31,12 @@
     <p>Last value sent: <span id="valueSent"></span></p>
 </body>
 <script>
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const simdgetId = urlParams.get('id');
+    document.getElementById("simdgetId").innerHTML = simdgetId;
+	
     // DOM Elements
     const connectButton = document.getElementById('connectBleButton');
     const disconnectButton = document.getElementById('disconnectBleButton');
