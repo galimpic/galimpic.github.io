@@ -32,8 +32,7 @@
 </body>
 <script>
 
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
+    const urlParams = new URLSearchParams(window.location.search);
     const simdgetId = urlParams.get('id');
     document.getElementById("simdgetId").innerHTML = simdgetId;
 	
@@ -48,7 +47,7 @@
     const timestampContainer = document.getElementById('timestamp');
 
     //Define BLE Device Specs
-    var deviceName ='Simdget_163031325948596';
+    var deviceName = 'Simdget_' + simdgetId;
     var bleService = '19b10000-e8f2-537e-4f6c-d104768a1214';
     var Characteristic = '19b10002-e8f2-537e-4f6c-d104768a1214';
     var sensorCharacteristic= '19b10001-e8f2-537e-4f6c-d104768a1214';
